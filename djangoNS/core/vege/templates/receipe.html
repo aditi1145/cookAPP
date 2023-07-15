@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            
+            width: 70vh;
+            height: 40vh;
+        }
+
+       
+        
+        body{
+            background-color: black;
+            {% comment %} background-image: url("backimg.jpg"); {% endcomment %}
+            width: 100vh;
+            height: 95vh;
+            background-size: contain;
+            background-repeat:no-repeat;
+            background-position: center center;
+        }
+        .form{
+            position: relative ;
+            width:50%;
+            margin-top: 160px;
+            margin-left: 400px;
+
+        }
+        
+        
+    </style>
+</head>
+<body >
+    <div class="bgimage">
+
+
+    <form class="form" style="background-color:white; text-align:left;width:fit-content; position:absolute ;"  method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>
+                <h1>POST YOUR RECEIPES!!!</h1>
+            </legend>
+       <table >
+        <tr>
+            <td>receipe_image</td>
+            <td><input type="file" name="1"></td>
+        </tr>
+
+        <tr>
+            <td>receipe_name</td>
+            <td><input type="text"  name="2"></td>
+        </tr>
+        <tr>
+            <td>receipe_ingredients</td>
+            <td><input type="text"  name="3"></td>
+        </tr>
+        <tr>
+            <td>steps_to_follow</td>
+            <td><input type="text"></td>
+        </tr>
+        
+       </table>
+   <button type="submit">submit</button>
+    </fieldset>
+    </form>
+   
+
+</div>
+</body>
+</html>
